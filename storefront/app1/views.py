@@ -4,4 +4,4 @@ from django.http import HttpResponse
 # Create your views here.
 
 def test(request):
-    return HttpResponse('<h1> hello world<h1>')
+    return render(request, 'hello.html', {"name": "Ethan"})
