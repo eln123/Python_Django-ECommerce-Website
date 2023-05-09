@@ -16,10 +16,10 @@ urlpatterns = [
 ]
 
    ```
-    6) Then create a templates folder in your app1 repo
-    7) Add html file to it
-    8) Then use render function in app1/views.py to render html.template file
-    9) 
+    6) Then created a templates folder in your app1 repo
+    7) Added html file to it
+    8) Then I used render function in app1/views.py to render html.template file
+
 ```python 
 
 from django.shortcuts import render
@@ -31,3 +31,4 @@ def test(request):
     return render(request, 'hello.html', {"name": "Ethan"})
 
 ```
+
