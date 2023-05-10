@@ -32,3 +32,5 @@ def test(request):
 
 ```
 
+    9) Created models in models.py
+    10) Ran makemigrations and migrate to 
