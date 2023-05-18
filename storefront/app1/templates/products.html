@@ -1,0 +1,12 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css'%}">
+{% if products %}
+{% for product in products %}
+<h1>{{ product.title}} </h1>
+<form method="post" action="/app1/products/{{product.id}}">
+    <input type="submit" value="Submit"></input>
+</form>
+{% endfor %}
+{% else %}
+<h1>Hello World</h1>
+{% endif %}
