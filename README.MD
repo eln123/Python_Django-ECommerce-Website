@@ -16,9 +16,9 @@ urlpatterns = [
 ]
 
    ```
-    6) Then created a templates folder in your app1 repo
-    7) Added html file to it
-    8) Then I used render function in app1/views.py to render html.template file
+    1) Then created a templates folder in app1 repo
+    2) Added html file to it
+    3) Then I used render function in app1/views.py to render html.template file
 
 ```python 
 
@@ -33,4 +33,18 @@ def test(request):
 ```
 
     9) Created models in models.py
-    10) Ran makemigrations and migrate to 
+    10) Ran makemigrations and migrate
+    11) Linked CSS to html files
+    12) What I want website to look like:
+
+Endpoints: 
+
+/products
+https://www.wholefoodsmarket.com/products
+
+/products/collection
+https://www.wholefoodsmarket.com/products/dairy-eggs
+
+/products/single-product
+https://www.wholefoodsmarket.com/product/maple-hill-creamery-organic-whole-milk-b06zynz7nf
+

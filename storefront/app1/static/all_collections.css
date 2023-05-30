@@ -1,0 +1,25 @@
+h1 {
+    color: green
+}
+
+#list-of-collections-container {
+    display: flex;
+    border: 2px solid black;
+}
+
+#list-of-collections-sidebar {
+    list-style-type: none;
+}
+
+#list-of-collections-with-imgs {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2f 2fr;
+    list-style-type: none;
+}
+
+#list-of-collections-with-imgs li {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black
+}

@@ -1,0 +1,38 @@
+<html>
+<head>
+{% load static %}
+<link rel="stylesheet" href="{% static 'all_collections.css'%}">
+</head>
+<body>
+{% if collections %}
+<h1 >Hi</h1>
+<div id="list-of-collections-container">
+<ul id="list-of-collections-sidebar">
+{% for collection in collections %}
+<li>
+<form id="yo" method="get" action="/app1/products/{{collection.id}}">
+    <input  type="submit" value={{collection.title}}></input>
+</form>
+</li>
+{% endfor %}
+</ul>
+<ul id="list-of-collections-with-imgs">
+    {% for collection in collections %}
+    <li id="list-with-imgs">
+        <div>img </div>
+    <form method="get" action="/app1/products/{{collection.id}}">
+        <input type="submit" value={{collection.title}}></input>
+    </form>
+    </li>
+    {% endfor %}
+    </ul>
+</div>
+{% else %}
+<h1>Hello World</h1>
+{% endif %}
+</body>
+
+</html>
+<!-- <form method="post" action="/app1/products/{{product.id}}">
+    <input type="submit" value={{product.collection.title}}></input>
+</form> -->
