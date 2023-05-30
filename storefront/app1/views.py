@@ -10,23 +10,21 @@ from .serializers import ProductSerializer
 # Create your views here.
 
 @api_view(['GET', 'POST'])
-def all_products(request):
+def all_collections(request):
     if request.method == 'GET':
-         queryset = Product.objects.all()
-         return render(request, 'products.html', {"products": queryset})
+         queryset = Collection.objects.all()
+       
+         return render(request, 'all_collections.html', {"collections": queryset})
+    
+@api_view(['GET'])
+def single_collection(request, collection_id):
+    if request.method == 'GET':
+         queryset = Product.objects.filter(collection_id=collection_id)
+         return render(request, 'single_collection.html', {"filtered_products": queryset})
 
 @api_view(['GET', 'POST'])
-def single_product(request, id):
+def single_product(request, collection_id, id):
     if request.method == 'GET':
-        print(request)
-        print('GET')
         product = get_object_or_404(Product, pk=id)
-        serializer = ProductSerializer(product)
-        return Response(id)
-    elif request.method == 'POST':
-        print('POST')
-        product = get_object_or_404(Product, pk=id)
-        serializer = ProductSerializer(product)
-        # I need to redirect 
-        return redirect(all_products)
-        return render(request, 'single_product.html', {"product": serializer})
+ 
+        return render(request, 'single_product.html', {"product": product})

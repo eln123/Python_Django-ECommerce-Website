@@ -1,0 +1,12 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css'%}">
+{% if filtered_products %}
+{% for product in filtered_products %}
+<form method="get" action="/app1/products/{{product.collection_id}}/{{product.id}}">
+    <input type="submit" value={{product.title}}></input>
+</form>
+{% endfor %}
+{% else %}
+<h1>Hello World</h1>
+{% endif %}
+
