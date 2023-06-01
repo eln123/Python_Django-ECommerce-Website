@@ -13,7 +13,8 @@ from .serializers import ProductSerializer
 def all_collections(request):
     if request.method == 'GET':
          queryset = Collection.objects.all()
-       
+         print('hi')
+         print(queryset)
          return render(request, 'all_collections.html', {"collections": queryset})
     
 @api_view(['GET'])
@@ -28,3 +29,8 @@ def single_product(request, collection_id, id):
         product = get_object_or_404(Product, pk=id)
  
         return render(request, 'single_product.html', {"product": product})
+    
+@api_view(['GET', 'POST'])
+def all_orders(request):
+    if request.method == 'GET':
+        return render(request, 'all_orders.html')
