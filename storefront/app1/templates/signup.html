@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %} Login {% endblock %}
+{% block content %}
+<form method="post" action="/app1/createUser/">
+    <input type="text" placeholder="email"></input>
+    <input type="text" placeholder="username"></input>
+    <input type="text" placeholder="password"></input>
+    <button id="loginSubmitButton" type="submit" value="submit"></button>
+</form>
+{% endblock %}

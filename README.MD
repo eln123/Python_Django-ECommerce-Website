@@ -48,3 +48,16 @@ https://www.wholefoodsmarket.com/products/dairy-eggs
 /products/single-product
 https://www.wholefoodsmarket.com/product/maple-hill-creamery-organic-whole-milk-b06zynz7nf
 
+
+     ## Bugs:
+    - My static css files were not updating properly
+    - I added this code to settings.py:
+```python
+     STATIC_URL = '/app1/static/'
+ ```
+
+    instead of:
+    
+``` python
+    STATIC_URL = '/static/'
+```

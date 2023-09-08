@@ -2,9 +2,16 @@ h1 {
     color: red
 }
 
+#navbar {
+    display: flex;
+    background-color: red;
+}
+
 #list-of-collections-container {
     display: flex;
-    border: 2px solid black;
+    border: 20px solid rgb(255, 72, 0);
+    height: 800px;
+    width: 10px
 }
 
 #list-of-collections-sidebar {
@@ -16,10 +23,26 @@ h1 {
     grid-template-columns: 2fr 2fr 2fr;
     grid-template-rows: 2fr 2f 2fr;
     list-style-type: none;
+    background-color: blue;
 }
 
 #list-of-collections-with-imgs li {
     display: flex;
     flex-direction: column;
-    border: 2px solid black
+    border: 40px solid black;
+    font-size: 24px;
+}
+
+#list-with-imgs {
+    background-color: green;
+    font-size: 50px;
+}
+
+#nav {
+    background-color: blue;
+}
+
+#loginSubmitButton {
+    height: 200px;
+    width: 200px
 }

@@ -6,4 +6,6 @@ urlpatterns = [
     path('products/<int:collection_id>/<int:id>', views.single_product),
     path('products/<int:collection_id>', views.single_collection),
     path('orders/', views.all_orders),
+    path('signup/', views.signup),
+    path('createUser/', views.create_user),
 ]
